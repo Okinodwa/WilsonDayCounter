@@ -1,0 +1,9 @@
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.csproj.AssemblyReference.cache
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.AssemblyInfoInputs.cache
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.AssemblyInfo.cs
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.csproj.CoreCompileInputs.cache
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Data\bin\Debug\netcoreapp3.1\WilsonDayCounter.Data.deps.json
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Data\bin\Debug\netcoreapp3.1\WilsonDayCounter.Data.dll
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Data\bin\Debug\netcoreapp3.1\WilsonDayCounter.Data.pdb
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.dll
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.pdb

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WilsonDayCounter", "WilsonDayCounter\WilsonDayCounter.csproj", "{69D1E7FF-7906-4E5C-ABC8-75C7AC68653E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilsonDayCounter", "WilsonDayCounter\WilsonDayCounter.csproj", "{69D1E7FF-7906-4E5C-ABC8-75C7AC68653E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WilsonDayCounter.Business", "WilsonDayCounter.Business\WilsonDayCounter.Business.csproj", "{2AC016D0-7946-4DD5-9172-6AA6C1F9EF52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilsonDayCounter.Business", "WilsonDayCounter.Business\WilsonDayCounter.Business.csproj", "{2AC016D0-7946-4DD5-9172-6AA6C1F9EF52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WilsonDayCounter.Data", "WilsonDayCounter.Data\WilsonDayCounter.Data.csproj", "{244B3149-7F23-4944-B476-DC70DE72FC51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WilsonDayCounter.Data", "WilsonDayCounter.Data\WilsonDayCounter.Data.csproj", "{244B3149-7F23-4944-B476-DC70DE72FC51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

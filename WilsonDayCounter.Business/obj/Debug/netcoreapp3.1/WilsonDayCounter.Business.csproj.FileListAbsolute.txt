@@ -1,0 +1,12 @@
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\bin\Debug\netcoreapp3.1\WilsonDayCounter.Business.deps.json
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\bin\Debug\netcoreapp3.1\WilsonDayCounter.Business.dll
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\bin\Debug\netcoreapp3.1\WilsonDayCounter.Business.pdb
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\bin\Debug\netcoreapp3.1\WilsonDayCounter.Data.dll
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\bin\Debug\netcoreapp3.1\WilsonDayCounter.Data.pdb
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.csproj.AssemblyReference.cache
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.AssemblyInfoInputs.cache
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.AssemblyInfo.cs
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.csproj.CoreCompileInputs.cache
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.csproj.CopyComplete
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.dll
+D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.pdb

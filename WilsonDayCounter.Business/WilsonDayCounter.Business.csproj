@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WilsonDayCounter.Data\WilsonDayCounter.Data.csproj" />
+  </ItemGroup>
+
 </Project>

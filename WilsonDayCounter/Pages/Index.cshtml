@@ -2,14 +2,42 @@
 @model VisitorLogModel
 @{
     ViewData["Title"] = "Home page";
-}
 
+    string maxDateValue = DateTime.Now.ToShortDateString();
+}
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Please enter your name and date of birth</p>
-    <form method="post">
-        <input type="text" />
-        <input type="date" />
+    <form method="post" class="text-left">
+        <div class="row justify-content-start">
+            <div class="col-sm-2">
+                <label for="txtName">Name:</label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="VisitorLog.Name" id="txtName" type="text" />
+            </div>
+            <div class="col-sm-12">
+                <span asp-validation-for="VisitorLog.Name"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label for="txtDateOfBirth" class="col-med-4">Date of Birth:</label>
+            </div>
+            <div class="col-sm-10">
+                <input asp-for="VisitorLog.DateOfBirth" id="txtDateOfBirth" type="date" max="@maxDateValue" />
+            </div>
+            <div class="col-sm-12">
+                <span asp-validation-for="VisitorLog.DateOfBirth"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <input type="submit" />
+            </div>
+        </div>
+        
+        
     </form>
     <div id="greeting">
 

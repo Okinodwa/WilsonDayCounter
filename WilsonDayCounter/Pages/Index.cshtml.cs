@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WilsonDayCounter.Business.DTO;
 
 namespace WilsonDayCounter.Pages
 {
@@ -17,9 +18,19 @@ namespace WilsonDayCounter.Pages
             _logger = logger;
         }
 
-        public void OnGet()
-        {
+        [BindProperty]
+        public VisitorLog VisitorLog { get; set; }
 
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+
+            await VisitorLog.Create();
+
+            return Page();
         }
     }
 }

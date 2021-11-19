@@ -15,11 +15,12 @@ namespace WilsonDayCounter.Business.DTO
         [Required, StringLength(255)]
         public string Name { get; set; }
         [Required]
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
 
         public DateTime DateEntered { get; set; }
 
-        public VisitorLog(string name, DateTime dateOfBirth) 
+        public VisitorLog() { }
+        public VisitorLog(string name, DateTime dateOfBirth)
         {
             Name = name;
             DateOfBirth = dateOfBirth;
@@ -35,15 +36,15 @@ namespace WilsonDayCounter.Business.DTO
             }
         }
 
-        public void Create()
+        public async Task Create()
         {
             var databaseLog = new WilsonDayCounter.Data.Models.VisitorLog();
             databaseLog.Name = Name;
-            databaseLog.DateOfBirth = DateOfBirth;
+            databaseLog.DateOfBirth = DateOfBirth ?? default;
             using (var context = new DatabaseContext())
             {
                 context.VisitorLogs.Add(databaseLog);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
@@ -82,7 +83,7 @@ namespace WilsonDayCounter.Business.DTO
                 if(existingLog != null)
                 {
                     existingLog.Name = Name;
-                    existingLog.DateOfBirth = DateOfBirth;
+                    existingLog.DateOfBirth = DateOfBirth ?? default;
                     context.SaveChanges();
                 }
             }
