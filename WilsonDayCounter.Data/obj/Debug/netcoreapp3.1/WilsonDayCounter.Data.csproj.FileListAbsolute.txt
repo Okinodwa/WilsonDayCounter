@@ -7,3 +7,13 @@ D:\Programming\WilsonDayCounter\WilsonDayCounter.Data\bin\Debug\netcoreapp3.1\Wi
 D:\Programming\WilsonDayCounter\WilsonDayCounter.Data\bin\Debug\netcoreapp3.1\WilsonDayCounter.Data.pdb
 D:\Programming\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.dll
 D:\Programming\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.pdb
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Data\bin\Debug\netcoreapp3.1\WilsonDayCounter.Data.deps.json
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Data\bin\Debug\netcoreapp3.1\WilsonDayCounter.Data.dll
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Data\bin\Debug\netcoreapp3.1\WilsonDayCounter.Data.pdb
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.csproj.AssemblyReference.cache
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.AssemblyInfoInputs.cache
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.AssemblyInfo.cs
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.csproj.CoreCompileInputs.cache
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.dll
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Data\obj\Debug\netcoreapp3.1\WilsonDayCounter.Data.pdb

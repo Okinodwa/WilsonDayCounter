@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace WilsonDayCounter.Data.Models
+namespace WilsonDayCounter.Data.Entities
 {
     public class VisitorLog
     {

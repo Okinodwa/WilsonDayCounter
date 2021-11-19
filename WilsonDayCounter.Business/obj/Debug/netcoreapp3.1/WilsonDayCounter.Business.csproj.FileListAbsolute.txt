@@ -10,3 +10,16 @@ D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.
 D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.csproj.CopyComplete
 D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.dll
 D:\Programming\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.pdb
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Business\bin\Debug\netcoreapp3.1\WilsonDayCounter.Business.deps.json
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Business\bin\Debug\netcoreapp3.1\WilsonDayCounter.Business.dll
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Business\bin\Debug\netcoreapp3.1\WilsonDayCounter.Business.pdb
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Business\bin\Debug\netcoreapp3.1\WilsonDayCounter.Data.dll
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Business\bin\Debug\netcoreapp3.1\WilsonDayCounter.Data.pdb
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.csproj.AssemblyReference.cache
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.AssemblyInfoInputs.cache
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.AssemblyInfo.cs
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.csproj.CoreCompileInputs.cache
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.csproj.CopyComplete
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.dll
+C:\Users\Josh\source\repos\WilsonDayCounter\WilsonDayCounter.Business\obj\Debug\netcoreapp3.1\WilsonDayCounter.Business.pdb

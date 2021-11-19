@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
-using WilsonDayCounter.Data.Models;
+using WilsonDayCounter.Data.Entities;
 
 namespace WilsonDayCounter.Data
 {
@@ -11,6 +11,13 @@ namespace WilsonDayCounter.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Filename=WilsonDayCounter.db");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<VisitorLog>()
+                .Property(b => b.DateEntered)
+                .HasDefaultValueSql("datetime('now')");
         }
     }
 }

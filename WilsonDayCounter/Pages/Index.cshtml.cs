@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WilsonDayCounter.Business.DTO;
+using WilsonDayCounter.Business.Models;
 
 namespace WilsonDayCounter.Pages
 {
@@ -28,8 +28,10 @@ namespace WilsonDayCounter.Pages
                 return Page();
             }
 
-            await VisitorLog.Create();
+            var daysOld = Math.Floor((DateTime.Now - VisitorLog.DateOfBirth).Value.TotalDays);
 
+            await VisitorLog.Create();
+            TempData.Add("Greeting", $"Welcome, {VisitorLog.Name}. You are {daysOld.ToString("N0")} days old.");
             return Page();
         }
     }

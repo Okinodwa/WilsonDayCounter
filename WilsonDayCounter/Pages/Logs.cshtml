@@ -1,5 +1,29 @@
 ﻿@page
 @model WilsonDayCounter.Pages.Shared.LogsModel
-@{
+
+
+<div class="row font-weight-bold">
+    <div class="col-sm-4">
+        Name
+    </div>
+    <div class="col-sm-4">
+        Date of Birth
+    </div>
+    <div class="col-sm-4">
+        Date Recorded
+    </div>
+</div>
+@foreach(var log in Model.VisitorLogs)
+{
+<div class="row break-word">
+    <div class="col-sm-4">
+        @log.Name
+    </div>
+    <div class="col-sm-4">
+        @log.DateOfBirth
+    </div>
+    <div class="col-sm-4">
+        @log.DateEntered
+    </div>
+</div>
 }
-View of all logs

@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using WilsonDayCounter.Business.Logic;
 using WilsonDayCounter.Data;
 
-namespace WilsonDayCounter.Business.DTO
+namespace WilsonDayCounter.Business.Models
 {
     public class VisitorLog
     {
         public int ID { get; set; }
-        [Required, StringLength(255)]
+        [Required(ErrorMessage = "Please provide a Name."), StringLength(255, ErrorMessage = "Name must be less than 256 characters.")]
         public string Name { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Please provide a valid Date of Birth.")]
         public DateTime? DateOfBirth { get; set; }
 
         public DateTime DateEntered { get; set; }
@@ -26,7 +26,7 @@ namespace WilsonDayCounter.Business.DTO
             DateOfBirth = dateOfBirth;
         }
 
-        public VisitorLog(WilsonDayCounter.Data.Models.VisitorLog databaseLog)
+        public VisitorLog(WilsonDayCounter.Data.Entities.VisitorLog databaseLog)
         {
             if(databaseLog != null)
             {
@@ -38,9 +38,12 @@ namespace WilsonDayCounter.Business.DTO
 
         public async Task Create()
         {
-            var databaseLog = new WilsonDayCounter.Data.Models.VisitorLog();
-            databaseLog.Name = Name;
-            databaseLog.DateOfBirth = DateOfBirth ?? default;
+            var databaseLog = new WilsonDayCounter.Data.Entities.VisitorLog
+            {
+                Name = Name,
+                DateOfBirth = DateOfBirth ?? default
+            };
+            
             using (var context = new DatabaseContext())
             {
                 context.VisitorLogs.Add(databaseLog);
@@ -55,7 +58,7 @@ namespace WilsonDayCounter.Business.DTO
                 var allLogs = context.VisitorLogs
                     .AsEnumerable()
                     .Select(log => new VisitorLog(log));
-                return allLogs;
+                return allLogs.ToList();
             }
         }
         public static VisitorLog Read(int id)

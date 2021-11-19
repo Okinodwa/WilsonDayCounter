@@ -1,9 +1,11 @@
 ﻿@page
 @model VisitorLogModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Home page";
 
-    string maxDateValue = DateTime.Now.ToShortDateString();
+    string minDateValue = ((DateTime)System.Data.SqlTypes.SqlDateTime.MinValue).ToString("yyyy-MM-dd");
+    string maxDateValue = DateTime.Now.ToString("yyyy-MM-dd");
 }
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
@@ -25,7 +27,7 @@
                 <label for="txtDateOfBirth" class="col-med-4">Date of Birth:</label>
             </div>
             <div class="col-sm-10">
-                <input asp-for="VisitorLog.DateOfBirth" id="txtDateOfBirth" type="date" max="@maxDateValue" />
+                <input asp-for="VisitorLog.DateOfBirth" id="txtDateOfBirth" type="date" min="@minDateValue" max="@maxDateValue" />
             </div>
             <div class="col-sm-12">
                 <span asp-validation-for="VisitorLog.DateOfBirth"></span>
@@ -36,10 +38,16 @@
                 <input type="submit" />
             </div>
         </div>
-        
-        
+        <div class="row">
+            <div class="col-sm-12">
+                <div asp-validation-summary="ModelOnly"></div>
+            </div>
+        </div>
     </form>
+    @if (TempData.ContainsKey("Greeting"))
+    {
     <div id="greeting">
-
+        @TempData["Greeting"]
     </div>
+    }
 </div>
