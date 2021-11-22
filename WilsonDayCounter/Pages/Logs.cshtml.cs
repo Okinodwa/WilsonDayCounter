@@ -16,7 +16,7 @@ namespace WilsonDayCounter.Pages.Shared
 
         public void OnGet()
         {
-            VisitorLogs = VisitorLog.Read();
+            VisitorLogs = VisitorLog.Read().OrderBy(log => log.DateEntered);
         }
     }
 }

@@ -1027,25 +1027,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Josh\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\zergl\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Josh\\source\\repos\\WilsonDayCounter\\WilsonDayCounter.Business\\WilsonDayCounter.Business.csproj",
+      "projectUniqueName": "D:\\Programming\\WilsonDayCounter\\WilsonDayCounter.Business\\WilsonDayCounter.Business.csproj",
       "projectName": "WilsonDayCounter.Business",
-      "projectPath": "C:\\Users\\Josh\\source\\repos\\WilsonDayCounter\\WilsonDayCounter.Business\\WilsonDayCounter.Business.csproj",
-      "packagesPath": "C:\\Users\\Josh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Josh\\source\\repos\\WilsonDayCounter\\WilsonDayCounter.Business\\obj\\",
+      "projectPath": "D:\\Programming\\WilsonDayCounter\\WilsonDayCounter.Business\\WilsonDayCounter.Business.csproj",
+      "packagesPath": "C:\\Users\\zergl\\.nuget\\packages\\",
+      "outputPath": "D:\\Programming\\WilsonDayCounter\\WilsonDayCounter.Business\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Josh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\zergl\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -1058,8 +1063,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Josh\\source\\repos\\WilsonDayCounter\\WilsonDayCounter.Data\\WilsonDayCounter.Data.csproj": {
-              "projectPath": "C:\\Users\\Josh\\source\\repos\\WilsonDayCounter\\WilsonDayCounter.Data\\WilsonDayCounter.Data.csproj"
+            "D:\\Programming\\WilsonDayCounter\\WilsonDayCounter.Data\\WilsonDayCounter.Data.csproj": {
+              "projectPath": "D:\\Programming\\WilsonDayCounter\\WilsonDayCounter.Data\\WilsonDayCounter.Data.csproj"
             }
           }
         }
@@ -1088,7 +1093,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

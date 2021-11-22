@@ -1,7 +1,9 @@
 ﻿@page
 @model WilsonDayCounter.Pages.Shared.LogsModel
-
-
+@{
+    ViewData["Title"] = "Vistor Log";
+ }
+<h1 class="display-4 text-center">Visitor Log</h1>
 <div class="row font-weight-bold">
     <div class="col-sm-4">
         Name
@@ -13,17 +15,17 @@
         Date Recorded
     </div>
 </div>
-@foreach(var log in Model.VisitorLogs)
+@foreach (var log in Model.VisitorLogs)
 {
 <div class="row break-word">
     <div class="col-sm-4">
-        @log.Name
+        @(log.Name ?? "")
     </div>
     <div class="col-sm-4">
-        @log.DateOfBirth
+        @((log.DateOfBirth ?? default).ToShortDateString())
     </div>
     <div class="col-sm-4">
-        @log.DateEntered
+        @log.DateEntered.ToString("O")
     </div>
 </div>
 }

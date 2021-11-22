@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WilsonDayCounter.Business.Logic;
+using WilsonDayCounter.Business.Logic.Helpers;
+using WilsonDayCounter.Business.Logic.Validation;
 using WilsonDayCounter.Data;
 
 namespace WilsonDayCounter.Business.Models
@@ -38,16 +41,24 @@ namespace WilsonDayCounter.Business.Models
 
         public async Task Create()
         {
-            var databaseLog = new WilsonDayCounter.Data.Entities.VisitorLog
+            var validationResult = Validate();
+            if(validationResult.IsValid)
             {
-                Name = Name,
-                DateOfBirth = DateOfBirth ?? default
-            };
-            
-            using (var context = new DatabaseContext())
+                var databaseLog = new WilsonDayCounter.Data.Entities.VisitorLog
+                {
+                    Name = Name,
+                    DateOfBirth = DateOfBirth ?? default
+                };
+
+                using (var context = new DatabaseContext())
+                {
+                    context.VisitorLogs.Add(databaseLog);
+                    await context.SaveChangesAsync();
+                }
+            }
+            else
             {
-                context.VisitorLogs.Add(databaseLog);
-                await context.SaveChangesAsync();
+                throw new InvalidArgumentException(validationResult.Message);
             }
         }
 
@@ -107,6 +118,71 @@ namespace WilsonDayCounter.Business.Models
                     context.SaveChanges();
                 }
             }
+        }
+
+        private Logic.Validation.ValidationResult Validate()
+        {
+            var nameValidation = ValidateName();
+            var dateOfBirthValidation = ValidateDateOfBirth();
+            return new Logic.Validation.ValidationResult
+            { 
+                IsValid = nameValidation.IsValid && dateOfBirthValidation.IsValid,
+                Message = string.Join("; ", nameValidation.Message, dateOfBirthValidation.Message)
+            };
+        }
+
+        private Logic.Validation.ValidationResult ValidateName()
+        {
+            var messages = new List<string>();
+            var nameValidationResult = new Logic.Validation.ValidationResult
+            {
+                IsValid = true
+            };
+
+            if(string.IsNullOrWhiteSpace(Name))
+            {
+                nameValidationResult.IsValid = false;
+                messages.Add("Name must have a value");
+            }
+
+            var nameMaxLengthAttribute = AttributesHelper.GetStringLengthAttribute(GetType(), "Name");
+
+            if (nameMaxLengthAttribute != null && Name != null && Name.Length > nameMaxLengthAttribute.MaximumLength)
+            {
+                nameValidationResult.IsValid = false;
+                messages.Add(nameMaxLengthAttribute.ErrorMessage ?? $"Name must be less than {nameMaxLengthAttribute.MaximumLength} characters");
+            }
+
+            nameValidationResult.Message = string.Join("; ", messages);
+            return nameValidationResult;
+        }
+
+        private Logic.Validation.ValidationResult ValidateDateOfBirth()
+        {
+            var messages = new List<string>();
+            var dateOfBirthValidationResult = new Logic.Validation.ValidationResult
+            {
+                IsValid = true
+            };
+
+            if(DateOfBirth == null)
+            {
+                dateOfBirthValidationResult.IsValid = false;
+                messages.Add("Date of Birth must have a value");
+            }
+            else if(DateOfBirth.Value.Date > DateTime.Now.Date)
+            {
+                dateOfBirthValidationResult.IsValid = false;
+                messages.Add("Date of Birth must be before today");
+            }
+            else if(DateOfBirth.Value.Date < SqlDateTime.MinValue)
+            {
+                dateOfBirthValidationResult.IsValid = false;
+                messages.Add($"Date of Birth myst be after {((DateTime)SqlDateTime.MinValue).ToShortDateString()}");
+            }
+
+            dateOfBirthValidationResult.Message = string.Join("; ", messages);
+            return dateOfBirthValidationResult;
         }
     }
 }
